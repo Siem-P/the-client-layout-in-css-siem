@@ -9,21 +9,31 @@
       /* Doe hier jouw ding! */
 
       body {
+        border: 1px solid black;
+        padding: 0.5em;
+        width: 50%;
+        margin: auto;
         display: grid;
-        gap: 0.5em;
-        grid-template-rows: 2fr 1fr 4fr 1fr;
+        gap: 0.3em;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas: 
-        "hoofd"
-        "nav"
+        "."
+        "nav "
+        "."
         "meen"
         "voeter";
       }
 
       header {
-        grid-area: hoofd;
+        grid-area: nav;
+        transform: rotate(-25deg);
+        z-index: 1;
       }
       nav {
         grid-area: nav;
+        transform: rotate(25deg);
+        z-index: 2;
       }
       main {
         grid-area: meen;
